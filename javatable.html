@@ -1,0 +1,53 @@
+<!doctype html>
+      <html>
+                     <head>
+                     <title>webpage</title>
+                      <style>
+                      button{
+                                   cursor:pointer;
+                                   background-color:red;
+                                   color:Black;
+                                   font-weight:600;
+                                   font-size:20px;
+                                   border-radius:8px;
+                                   box-shadow:0 4px 10px lightgray;
+                          }
+          button:hover{
+                                 background-color:mediumred;
+                                transform= tranlateY(-2px);
+                                box-shadow=0 8px 10px silver;
+                                }
+                     h1{
+                         background-color:red;
+                         color:golden;
+                       }
+                    input{
+                               cursor:pointer;
+                              
+                             }
+                    body{
+                            background-color:blue;
+                            }
+                
+                      </style>              
+                     </head>
+      <body>
+                  <center>
+                  <h1>Show any table</h1>
+                  <input type="number" placeholder="Type number" id="num">
+                  <button onclick="table()">Show Table</button>
+                  <p id="result"></p>
+                  </center>
+                  <script>
+                   function table(){
+                   let n = Number(document.getElementById("num").value);
+                  let output ="";
+
+                 for(let i=1; i<=10; i++){
+                                 output += n+"*"+i+"="+(n*i)+"<br>";
+                    }
+                 document.getElementById("result").innerHTML=output;
+                 }
+                 </script>
+      </body>
+      </html>
